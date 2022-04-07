@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+:root{
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    background-color: var(--dark-grayish-blue);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc( 100vh - 0.2rem);
+}
+img{
+    max-width: 100%;
+}
+p{
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--light-cyan);
+    font-weight: 600;
+}
+.container{
+    background-color: var(--grayish-blue);
+    padding: 1.25rem 1.25rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+}
+.container h1{
+    color: var(--neon-green);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin: 2rem 0;
+}
+.container .btn{
+    background-color: var(--neon-green);
+    padding: 1.25rem;
+    border: none;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container .btn:hover{
+    transform: translateX(-50%) scale(1.1) rotate(90deg);
+    box-shadow: 0 0 35px rgba(82, 255, 169, 0.8);
+}
+.container .img{
+    margin: 3rem 0;
+    position: relative;
+    /* margin-bottom: 2rem; */
+}
+/* .img {
+    background-repeat: no-repeat;
+    background-image: url(./images/pattern-divider-mobile.svg); 
+  } */
+.divider::before{
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: var(--light-cyan);
+    right: 1.25rem;
+    bottom: 5.8rem;
+    position: absolute;
+    display: block;
+    z-index: 99;
+}
+.divider::after{
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: var(--light-cyan);
+    bottom: 5.8rem;
+    padding-left: 5px;
+    position: absolute;
+    display: block;
+}
+
+  
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 5rem 0;
+    color: var(--light-cyan);
+    letter-spacing: 2px;
+}
+.attribution a { 
+    color: var(--neon-green); 
+    text-decoration: none;
+    transition: .3s;
+}
+.attribution a:hover { 
+    color: hsla(150, 100%, 66%, 0.5); 
+}
+
+
+@media( min-width: 768px ){
+    .container{
+        max-width: 480px;
+    }
+}
